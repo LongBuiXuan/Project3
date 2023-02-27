@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:orientation="horizontal"
+    android:background="@color/colorBackground"
+    android:baselineAligned="false">
+
+    <!-- D-pad -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="0.3"
+        android:gravity="start|center">
+
+        <include layout="@layout/layout_gb_dpad" />
+    </LinearLayout>
+
+    <!-- Screen -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="0.6"
+        android:orientation="horizontal"
+        android:background="@drawable/gb_frame">
+
+
+        <!--   1x: 160x144
+             1.5x: 240x216
+            1.75x: 280x252 -->
+        <com.example.project3.ui.GameboyScreen
+            android:layout_width="240dp"
+            android:layout_height="216dp"
+            android:id="@+id/gbscreen" />
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingTop="16dp"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- A and B -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:gravity="end|center">
+
+            <include layout="@layout/layout_gb_buttons_main" />
+        </LinearLayout>
+
+        <!-- Start, select, save/load state, and rewind -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="end|center">
+
+            <include layout="@layout/layout_gb_buttons_aux" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

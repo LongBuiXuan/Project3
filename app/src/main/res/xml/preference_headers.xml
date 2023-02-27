@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Top-level preference headers -->
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <header
+        android:title="@string/emulator_prefs"
+        android:summary="@string/emulator_prefs_desc">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.project3"
+            android:targetClass="com.example.project3.ui.EmulationOptionsActivity" />
+    </header>
+
+    <header
+        android:title="@string/about_title"
+        android:summary="@string/about_desc">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.project3"
+            android:targetClass="com.example.project3.ui.AboutActivity" />
+    </header>
+</preference-headers>
